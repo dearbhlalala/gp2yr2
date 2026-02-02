@@ -1,7 +1,6 @@
-using System.Diagnostics;
 using UnityEngine;
 
-public class Animation : MonoBehaviour
+public class AnimationScript : MonoBehaviour
 {
     Animator animator;
 
@@ -27,7 +26,7 @@ public class Animation : MonoBehaviour
         animator.SetFloat ("vAxisInput", verticalInput);
         animator.SetFloat ("hAxisInput", horizontalInput);
         
-        if (Input.GetKey (KeyCode.Z))
+        if (Input.GetKey (KeyCode.LeftShift))
         {
             animator.SetBool ("runBool", true);
             UnityEngine.Debug.Log("Run");
@@ -38,5 +37,28 @@ public class Animation : MonoBehaviour
             UnityEngine.Debug.Log(" No Run");
             
         }
+        if (Input.GetKey (KeyCode.LeftControl) )
+        {
+            animator.SetLayerWeight (1, 0.5f);
+        } 
+        else
+        {
+            animator.SetLayerWeight (1, 0.0f);
+        
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            animator.SetBool ("jumpBool", true);
+            UnityEngine.Debug.Log("jump");
+
+        }
+        else
+        {
+            animator.SetBool ("jumpBool", false);
+            
+        }
     }
+
+    
+
 }
