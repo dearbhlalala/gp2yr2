@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class BehaviorScript1 : StateMachineBehaviour

@@ -57,8 +57,6 @@ public class AnimationScript : MonoBehaviour
             animator.SetBool ("jumpBool", false);
             
         }
+      
     }
-
-    
-
 }
