@@ -29,12 +29,12 @@ public class AnimationScript : MonoBehaviour
         if (Input.GetKey (KeyCode.LeftShift))
         {
             animator.SetBool ("runBool", true);
-            UnityEngine.Debug.Log("Run");
+            
         }
         else
         {
             animator.SetBool ("runBool", false);
-            UnityEngine.Debug.Log(" No Run");
+            
             
         }
         if (Input.GetKey (KeyCode.LeftControl) )
