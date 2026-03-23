@@ -6,6 +6,7 @@ public struct SaveData
     public Vector3 playerPosition;
     public Vector3 enemyPosition;
     public int doorOpenCount;
+    public string playerName;
 
 }
 

@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        LoadGame(); 
+        LoadGame();
+        Debug.Log(Application.persistentDataPath);
     }
 
     void SaveGame()
@@ -38,7 +39,8 @@ public class GameManager : MonoBehaviour
             {
                 playerPosition = new Vector3(7.82999992f, -1.78813934e-07f, -1.71000004f),
                 enemyPosition = new Vector3(-2.91261697f, 2.38418579e-07f, -4.55461788f),
-                doorOpenCount = 0
+                doorOpenCount = 0,
+                playerName = null
             };
         }
     }
