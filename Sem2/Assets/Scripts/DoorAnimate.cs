@@ -3,6 +3,7 @@ using UnityEngine;
 public class DoorAnimate : MonoBehaviour
 {
     Animator anim;
+    public int doorOpenCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,7 +17,9 @@ public class DoorAnimate : MonoBehaviour
         if (other.gameObject.name == "Soldier" && anim.GetBool("doorOpen") == false) {
 
             anim.SetBool ("doorOpen", true);
-            Debug.Log ("Door Open:" + other.gameObject.name);
+            GameManager.instance.saveDataSO.saveData.doorOpenCount++;
+            Debug.Log(GameManager.instance.saveDataSO.saveData.doorOpenCount);
+
         }
     }
 
