@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        LoadGame();
-        Debug.Log(Application.persistentDataPath);
+        LoadGame(); 
+        Debug.Log(filePath);
     }
 
     void SaveGame()
