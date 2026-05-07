@@ -102,8 +102,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509057555304850761}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29920945, y: 0.07381624, z: -0.023232223, w: 0.95104426}
-  m_LocalPosition: {x: -0.8, y: 4.51, z: -4.990001}
+  m_LocalRotation: {x: 0.27465677, y: -0.15385652, z: 0.044570684, w: 0.9481062}
+  m_LocalPosition: {x: 4.9125876, y: 10.08065, z: -13.45113}
   m_LocalScale: {x: 0.99999964, y: 1, z: 0.99999964}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142,7 +142,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 75
+  field of view: 41.6
   orthographic: 0
   orthographic size: 8
   m_Depth: 0
@@ -210,15 +210,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.83
+      value: 9.378368
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000017881393
+      value: 0.0000004435537
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.71
+      value: -1.6140541
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -251,6 +251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_Name
       value: Soldier_CA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       propertyPath: m_TagString
@@ -296,6 +300,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 392539232790298445}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6232346371854531870}
   m_SourcePrefab: {fileID: 100100000, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
 --- !u!1 &3828456116088594473 stripped
 GameObject:
@@ -505,14 +512,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3204201054
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2400063646
+  InScenePlacedSourceGlobalObjectIdHash: 3204201054
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
+  SceneMigrationSynchronization: 0
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
@@ -543,12 +550,12 @@ MonoBehaviour:
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
   AuthorityMode: 1
-  TickSyncChildren: 0
+  TickSyncChildren: 1
   UseUnreliableDeltas: 0
   SyncPositionX: 1
   SyncPositionY: 1
   SyncPositionZ: 1
-  SyncRotAngleX: 0
+  SyncRotAngleX: 1
   SyncRotAngleY: 0
   SyncRotAngleZ: 0
   SyncScaleX: 0
@@ -561,7 +568,7 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  SwitchTransformSpaceWhenParented: 0
+  SwitchTransformSpaceWhenParented: 1
   Interpolate: 1
   SlerpPosition: 0
 --- !u!114 &2409526108736540068
@@ -593,7 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ShowTopMostFoldoutHeaderGroup: 1
   NetworkAnimatorExpanded: 0
-  AuthorityMode: 0
+  AuthorityMode: 1
   m_Animator: {fileID: 74115214636397536}
   TransitionStateInfoList: []
   AnimatorParameterEntries:
@@ -620,6 +627,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &6232346371854531870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828456116088594473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Components.NetworkRigidbody
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkRigidbodyBaseExpanded: 0
+  UseRigidBodyForMotion: 1
+  AutoUpdateKinematicState: 1
+  AutoSetKinematicOnDespawn: 1
 --- !u!4 &4497609630545984147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd689647a6b192249a8d060a5931dad9, type: 3}
